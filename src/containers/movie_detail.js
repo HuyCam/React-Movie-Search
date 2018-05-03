@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import DetailSection from '../components/movie-detail-section';
 
 class MovieDetail extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     getVisibility() {
         if (this.props.data) {
             this.setState({visibility: 'visible'});
