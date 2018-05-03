@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DetailSection from '../components/movie-detail-section';
 
 class MovieDetail extends Component {
     getVisibility() {
@@ -9,32 +8,15 @@ class MovieDetail extends Component {
         }
     }
     render() {
-        let movie;
-        if (this.props.data) {
-            movie = this.props.data.data;
-        } else if (!movie) {
-            return <div>!Movie Detail</div>;
-        }
-
-        if (movie.Error) {
-            return <div>{movie.Error}</div>;
-        }
-        console.log(movie);
-        
+        console.log(this.props.data);
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6 banner">
-                        <img src={movie ? movie.Poster : ""}/>
+                    <div className="col-md-6">
+                        !MovieDetail
                     </div>
-                    <div className="col-md-6 detail">
-                      <ul classsName="list-group" >
-                        <DetailSection detail={['Actor', movie.Actors]} />
-                        <DetailSection detail={['Director', movie.Director]} />
-                        <DetailSection detail={['Genre', movie.Genre]} />
-                        <DetailSection detail={['Production', movie.Production]} />
-                        <DetailSection detail={['Plot', movie.Plot]} />
-                      </ul>
+                    <div className="col-md-6">
+                        !MovieDetail
                     </div>
                 </div>
             </div>
@@ -44,7 +26,7 @@ class MovieDetail extends Component {
 
 function mapStateToProps(state) {
     return {
-        data: state.movieData
+        data: state.data
     }
 }
 
