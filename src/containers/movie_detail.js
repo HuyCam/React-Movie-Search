@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class MovieDetail extends Component {
-    constructor(props) {
-        super(props);
-    }
 
-    getVisibility() {
-        if (this.props.data) {
-            this.setState({visibility: 'visible'});
-        }
-    }
+class MovieDetail extends Component {
     render() {
         console.log(this.props.data);
         return(
