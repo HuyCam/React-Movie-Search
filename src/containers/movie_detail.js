@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 class MovieDetail extends Component {
     render() {
-        console.log(this.props.data);
         return(
             <div className="container">
                 <div className="row">
